@@ -1,1 +1,66 @@
-<h1>Hello World</h1>
+<div id="map" style="width: 100%; height: 500px;"></div>
+
+  <script type="text/javascript">
+    var locations = [
+      //EUROPE
+      ['Paris ', 48.85661400000001, 2.3522219000000177],
+      ['Madrid', 40.4167754, -3.7037901999999576],
+      ['Lisbonne', 38.7222524, -9.139336599999979],
+      ['Rome', 41.9027835, 12.496365500000024],
+      ['Londres', 51.5073509, -0.12775829999998223],
+      ['Berlin', 52.52000659999999, 13.404953999999975],
+      ['Varsovie', 52.2296756, 21.012228700000037],
+      ['Moscou', 55.755826, 37.6173],
+      //ASIE
+      ['Tokyo', 35.6894875, 139.69170639999993],
+      ['Pékin', 39.904211, 116.40739499999995],
+      ['Bangkok', 13.7563309, 100.50176510000006],
+      ['Singapour', 1.3553794, 103.86774439999999],
+      ['Ankara', 39.9333635, 32.85974190000002],
+      ['Jérusalem', 31.768319, 35.21370999999999],
+      ['Séoul', 37.566535, 126.97796919999996],
+      //AMERIQUE
+      ['New York', 40.660639, -73.981934],
+      ['Washington', 38.819167, -77.01416],
+      ['LosAngeles', 33.976165, -118.234863],
+      ['Mexico,', -33.665836, -99.118652],
+      ['Santiago', -33.950198, -70.751953],
+      ['Brasilia', -15.978225, -47.8125],
+      ['Buenos Aires', -34.972397, -58.183594],
+      //OCEANIE
+      ['Canberra', -35.3075, 149.124417],
+      ['Wellington', -41.2864603, 174.77623600000004],
+      //AFRIQUE
+      ['Pretoria', -9.067379373933349, 17.6220703125],
+      ['Alger', 36.753768, 3.0587560999999823,],
+      ['Nairobi', -1.322635, 36.804199],
+      ['Brazzaville,', -9.067379373933349, 17.6220703125],
+      ['Le Caire', 30.023448, 31.201172],
+      ['Rabat', 33.972522 , -6.899414],
+      ['Tunis', 36.731842, 10.151367],
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 3,
+      center: new google.maps.LatLng(40, 0),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+  </script>

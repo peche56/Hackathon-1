@@ -14,5 +14,7 @@ angular.module('app')
           };
             return $http(reqwebcam);
         },
+
+
     };
 });

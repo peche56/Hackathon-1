@@ -6,8 +6,8 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "\n" +
     "\n" +
     "\n" +
-    "<div ng-bind-html=\"bindHTML\" class=\"video-container video\">\n" +
-    "</div>\n"
+    "<iframe src=\"{{bindHTML}}\" class=\"video\">\n" +
+    "</iframe>\n"
   );
 
   $templateCache.put("anon/login.html",

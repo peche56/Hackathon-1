@@ -57840,6 +57840,8 @@ angular.module('app')
           };
             return $http(reqwebcam);
         },
+
+
     };
 });
 
@@ -57867,18 +57869,34 @@ angular.module('app')
     });
 
 angular.module('app')
-    .controller('MainController', function($scope, webcamService) {
+    .controller('MainController', function($scope, webcamService, $sce) {
 
 
         $scope.query = "";
         $scope.goSearch = function() {
 
-            // OMDB API
+            // webcam API
             webcamService.getOne($scope.query).then(function(response) {
                 $scope.details = response.data;
-                console.log($scope.details);
+                console.log($scope.details.result.webcams[0].id);
 
-            });
+
+
+
+
+//2EME ETAPE
+                var idcam = $scope.details.result.webcams[0].id;
+                console.log(idcam);
+
+  
+                $scope.bindHTML = $sce.trustAsResourceUrl("https://api.lookr.com/embed/timelapse/" + idcam + "/lifetime");
+
+                console.log();
+
+
+
+});
+
         };
     });
 
@@ -58017,8 +58035,8 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "\n" +
     "\n" +
     "\n" +
-    "<div ng-bind-html=\"bindHTML\" class=\"video-container video\">\n" +
-    "</div>\n"
+    "<iframe src=\"{{bindHTML}}\" class=\"video\">\n" +
+    "</iframe>\n"
   );
 
   $templateCache.put("anon/login.html",

@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('MainController', function($scope, webcamService) {
+    .controller('MainController', function($scope, webcamService, $sce) {
 
 
         $scope.query = "";
@@ -18,8 +18,14 @@ angular.module('app')
                 var idcam = $scope.details.result.webcams[0].id;
                 console.log(idcam);
 
+  
+                $scope.bindHTML = $sce.trustAsResourceUrl("https://api.lookr.com/embed/timelapse/" + idcam + "/lifetime");
+
+                console.log();
 
 
-            });
+
+});
+
         };
     });

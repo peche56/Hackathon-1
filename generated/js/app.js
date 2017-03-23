@@ -57840,6 +57840,8 @@ angular.module('app')
           };
             return $http(reqwebcam);
         },
+
+
     };
 });
 
@@ -57867,18 +57869,42 @@ angular.module('app')
     });
 
 angular.module('app')
-    .controller('MainController', function($scope, webcamService) {
+    .controller('MainController', function($scope, webcamService, $sce) {
 
 
         $scope.query = "";
         $scope.goSearch = function() {
 
-            // OMDB API
+            // webcam API
             webcamService.getOne($scope.query).then(function(response) {
                 $scope.details = response.data;
-                console.log($scope.details);
+                $scope.title = $scope.details.result.webcams[0].title;
+                console.log($scope.details.result);
 
-            });
+
+
+
+
+//2EME ETAPE
+                var idcam1 = $scope.details.result.webcams[0].id;
+                var idcam2 = $scope.details.result.webcams[1].id;
+                var idcam3 = $scope.details.result.webcams[3].id;
+                var idcam4 = $scope.details.result.webcams[4].id;
+
+                console.log(idcam1);
+
+
+                $scope.bindHTML1 = $sce.trustAsResourceUrl("https://api.lookr.com/embed/timelapse/" + idcam1 + "/lifetime");
+                $scope.bindHTML2 = $sce.trustAsResourceUrl("https://api.lookr.com/embed/timelapse/" + idcam2 + "/lifetime");
+                $scope.bindHTML3 = $sce.trustAsResourceUrl("https://api.lookr.com/embed/timelapse/" + idcam3 + "/lifetime");
+                $scope.bindHTML4 = $sce.trustAsResourceUrl("https://api.lookr.com/embed/timelapse/" + idcam4 + "/lifetime");
+
+                console.log();
+
+
+
+});
+
         };
     });
 
@@ -58012,12 +58038,64 @@ angular.module('app')
 angular.module("app").run(["$templateCache", function($templateCache) {
 
   $templateCache.put("anon/home.html",
-    "<input class=\"search-bar\" type=\"text\" name=\"searching\" value=\"\" placeholder=\"Search something...\" ng-model=\"query\">\n" +
-    "<button type=\"button\" class=\"btn btn-default glyphicon glyphicon-search loupe\" aria-hidden=\"true\" ng-click=\"goSearch()\"></button>\n" +
+    "<div class=\"container\">\n" +
+    "\n" +
+    "\n" +
+    "    <div class=\"row\">\n" +
+    "\n" +
+    "        <div class=\"col-lg-12\">\n" +
     "\n" +
     "\n" +
     "\n" +
-    "<div ng-bind-html=\"bindHTML\" class=\"video-container video\">\n" +
+    "            <input class=\"search-bar\" type=\"text\" name=\"searching\" value=\"\" placeholder=\"Search something...\" ng-model=\"query\">\n" +
+    "            <button type=\"button\" class=\"btn btn-default glyphicon glyphicon-search loupe\" aria-hidden=\"true\" ng-click=\"goSearch()\"></button>\n" +
+    "\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "<div class=\"row\">\n" +
+    "\n" +
+    "<p>{{title}}</p>\n" +
+    "\n" +
+    "</div>\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "    <div class=\"row\">\n" +
+    "\n" +
+    "        <div class=\"col-xs-6\">\n" +
+    "\n" +
+    "          <iframe src=\"{{bindHTML1}}\" class=\"video\"></iframe>\n" +
+    "\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <div class=\"col-xs-6\">\n" +
+    "\n" +
+    "            <iframe src=\"{{bindHTML2}}\" class=\"video\"></iframe>\n" +
+    "\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <div class=\"col-xs-6\">\n" +
+    "\n" +
+    "            <iframe src=\"{{bindHTML3}}\" class=\"video\"></iframe>\n" +
+    "\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <div class=\"col-xs-6\">\n" +
+    "\n" +
+    "            <iframe src=\"{{bindHTML4}}\" class=\"video\"></iframe>\n" +
+    "\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "\n" +
     "</div>\n"
   );
 

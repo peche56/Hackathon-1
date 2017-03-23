@@ -1,7 +1,9 @@
 angular.module("app").run(["$templateCache", function($templateCache) {
 
   $templateCache.put("anon/home.html",
-    "<h1>Hello World</h1>"
+    "<input class=\"search-bar\" type=\"text\" name=\"searching\" value=\"\" placeholder=\"Search something...\" ng-model=\"query\">\n" +
+    "              <a ui-sref=\"anon.resultat\"><button type=\"button\" class=\"btn btn-default glyphicon glyphicon-search loupe\" aria-hidden=\"true\" ng-click=\"goSearch()\">\n" +
+    "                </button></a> \n"
   );
 
   $templateCache.put("anon/login.html",
@@ -21,6 +23,10 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "        </form>\n" +
     "    </div>\n" +
     "</div>\n"
+  );
+
+  $templateCache.put("anon/map.html",
+    "<h1>Hello World</h1>"
   );
 
   $templateCache.put("anon/navbar.html",
@@ -44,6 +50,7 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "                <li>\n" +
     "                    <li ui-sref-active=\"active\"><a ui-sref=\"anon.login\" ng-hide=\"auth.isAuthenticated()\">Login</a></li>\n" +
     "                    <li ui-sref-active=\"active\"><a ui-sref=\"anon.register\" ng-hide=\"auth.isAuthenticated()\">Register</a></li>\n" +
+    "                    <li ui-sref-active=\"active\"><a ui-sref=\"anon.map\" ng-hide=\"auth.isAuthenticated()\">Map</a></li>\n" +
     "                    <li ui-sref-active=\"active\"><a ui-sref=\"user.dashboard\" ng-show=\"auth.isAuthenticated()\">Dashboard</a></li>\n" +
     "                    <li><a ng-click=\"logout()\" ng-show=\"auth.isAuthenticated()\" href='#'>Logout</a></li>\n" +
     "                </li>\n" +

@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('MainController', function($scope, webcamService) {
+    .controller('MapController', function($scope, mapService) {
 
 
         $scope.query = "";

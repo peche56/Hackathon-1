@@ -57788,6 +57788,25 @@ angular.module('app')
     });
 
 angular.module('app')
+
+
+
+.service('webcamService', function($http) {
+    return {
+        getOne: function(query) {
+          var reqmap = {
+            method: 'GET',
+            url: "https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=" + query + "&count=10&offset=0&mkt=en-us&safeSearch=Moderate",
+            headers: {
+              'Ocp-Apim-Subscription-Key' : 'cf968acca48c492b88c535945b332bf0'
+            }
+          };
+            return $http(reqmap);
+        },
+    };
+});
+
+angular.module('app')
     .service('UserService', function($http) {
         return {
             getAll: function() {
@@ -57804,6 +57823,25 @@ angular.module('app')
             }
         };
     });
+
+angular.module('app')
+
+
+
+.service('webcamService', function($http) {
+    return {
+        getOne: function(query) {
+          var reqwebcam = {
+            method: 'GET',
+            url: "https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=" + query + "&count=10&offset=0&mkt=en-us&safeSearch=Moderate",
+            headers: {
+              'Ocp-Apim-Subscription-Key' : 'cf968acca48c492b88c535945b332bf0'
+            }
+          };
+            return $http(reqwebcam);
+        },
+    };
+});
 
 angular.module('app')
     .controller('DashboardController', function($scope, CurrentUser, UserService) {
@@ -57829,8 +57867,31 @@ angular.module('app')
     });
 
 angular.module('app')
-    .controller('MainController', function($scope) {
-      /* Here is your main controller */
+    .controller('MainController', function($scope, webcamService) {
+
+
+        $scope.query = "";
+        $scope.goSearch = function() {
+
+            // OMDB API
+            webcambService.getOne($scope.query).then(function(response) {
+                $scope.details = response.data;
+            });
+        };
+    });
+
+angular.module('app')
+    .controller('MapController', function($scope, mapService) {
+
+
+        $scope.query = "";
+        $scope.goSearch = function() {
+
+            // OMDB API
+            webcambService.getOne($scope.query).then(function(response) {
+                $scope.details = response.data;
+            });
+        };
     });
 
 angular.module('app')
@@ -57882,6 +57943,17 @@ angular.module('app')
                     }
                 }
             })
+
+            .state('anon.map', {
+                url: '/map',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/map.html',
+                        controller: 'MapController'
+                    }
+                }
+            })
+
             .state('anon.login', {
                 url: '/login',
                 views: {
@@ -57938,7 +58010,9 @@ angular.module('app')
 angular.module("app").run(["$templateCache", function($templateCache) {
 
   $templateCache.put("anon/home.html",
-    "<h1>Hello World</h1>"
+    "<input class=\"search-bar\" type=\"text\" name=\"searching\" value=\"\" placeholder=\"Search something...\" ng-model=\"query\">\n" +
+    "              <a ui-sref=\"anon.resultat\"><button type=\"button\" class=\"btn btn-default glyphicon glyphicon-search loupe\" aria-hidden=\"true\" ng-click=\"goSearch()\">\n" +
+    "                </button></a> \n"
   );
 
   $templateCache.put("anon/login.html",
@@ -57958,6 +58032,10 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "        </form>\n" +
     "    </div>\n" +
     "</div>\n"
+  );
+
+  $templateCache.put("anon/map.html",
+    "<h1>Hello World</h1>"
   );
 
   $templateCache.put("anon/navbar.html",
@@ -57981,6 +58059,7 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "                <li>\n" +
     "                    <li ui-sref-active=\"active\"><a ui-sref=\"anon.login\" ng-hide=\"auth.isAuthenticated()\">Login</a></li>\n" +
     "                    <li ui-sref-active=\"active\"><a ui-sref=\"anon.register\" ng-hide=\"auth.isAuthenticated()\">Register</a></li>\n" +
+    "                    <li ui-sref-active=\"active\"><a ui-sref=\"anon.map\" ng-hide=\"auth.isAuthenticated()\">Map</a></li>\n" +
     "                    <li ui-sref-active=\"active\"><a ui-sref=\"user.dashboard\" ng-show=\"auth.isAuthenticated()\">Dashboard</a></li>\n" +
     "                    <li><a ng-click=\"logout()\" ng-show=\"auth.isAuthenticated()\" href='#'>Logout</a></li>\n" +
     "                </li>\n" +

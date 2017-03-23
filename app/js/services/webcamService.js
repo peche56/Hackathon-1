@@ -7,9 +7,9 @@ angular.module('app')
         getOne: function(query) {
           var reqwebcam = {
             method: 'GET',
-            url: "https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=" + query + "&count=10&offset=0&mkt=en-us&safeSearch=Moderate",
+            url: "https://webcamstravel.p.mashape.com/webcams/list/country=" + query,
             headers: {
-              'Ocp-Apim-Subscription-Key' : 'cf968acca48c492b88c535945b332bf0'
+              "X-Mashape-Key" : "0d6eCxYwyzmsheigDv3bbsNP83nDp1ieAzejsn3qf4uCzZtGwX"
             }
           };
             return $http(reqwebcam);

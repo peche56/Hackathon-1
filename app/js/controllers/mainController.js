@@ -6,8 +6,10 @@ angular.module('app')
         $scope.goSearch = function() {
 
             // OMDB API
-            webcambService.getOne($scope.query).then(function(response) {
+            webcamService.getOne($scope.query).then(function(response) {
                 $scope.details = response.data;
+                console.log($scope.details);
+
             });
         };
     });

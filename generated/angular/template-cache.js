@@ -2,8 +2,12 @@ angular.module("app").run(["$templateCache", function($templateCache) {
 
   $templateCache.put("anon/home.html",
     "<input class=\"search-bar\" type=\"text\" name=\"searching\" value=\"\" placeholder=\"Search something...\" ng-model=\"query\">\n" +
-    "              <a ui-sref=\"anon.resultat\"><button type=\"button\" class=\"btn btn-default glyphicon glyphicon-search loupe\" aria-hidden=\"true\" ng-click=\"goSearch()\">\n" +
-    "                </button></a> \n"
+    "<button type=\"button\" class=\"btn btn-default glyphicon glyphicon-search loupe\" aria-hidden=\"true\" ng-click=\"goSearch()\"></button>\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "<div ng-bind-html=\"bindHTML\" class=\"video-container video\">\n" +
+    "</div>\n"
   );
 
   $templateCache.put("anon/login.html",

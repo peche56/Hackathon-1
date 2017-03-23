@@ -57833,9 +57833,9 @@ angular.module('app')
         getOne: function(query) {
           var reqwebcam = {
             method: 'GET',
-            url: "https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=" + query + "&count=10&offset=0&mkt=en-us&safeSearch=Moderate",
+            url: "https://webcamstravel.p.mashape.com/webcams/list/country=" + query,
             headers: {
-              'Ocp-Apim-Subscription-Key' : 'cf968acca48c492b88c535945b332bf0'
+              "X-Mashape-Key" : "0d6eCxYwyzmsheigDv3bbsNP83nDp1ieAzejsn3qf4uCzZtGwX"
             }
           };
             return $http(reqwebcam);
@@ -57874,8 +57874,10 @@ angular.module('app')
         $scope.goSearch = function() {
 
             // OMDB API
-            webcambService.getOne($scope.query).then(function(response) {
+            webcamService.getOne($scope.query).then(function(response) {
                 $scope.details = response.data;
+                console.log($scope.details);
+
             });
         };
     });
@@ -58011,8 +58013,12 @@ angular.module("app").run(["$templateCache", function($templateCache) {
 
   $templateCache.put("anon/home.html",
     "<input class=\"search-bar\" type=\"text\" name=\"searching\" value=\"\" placeholder=\"Search something...\" ng-model=\"query\">\n" +
-    "              <a ui-sref=\"anon.resultat\"><button type=\"button\" class=\"btn btn-default glyphicon glyphicon-search loupe\" aria-hidden=\"true\" ng-click=\"goSearch()\">\n" +
-    "                </button></a> \n"
+    "<button type=\"button\" class=\"btn btn-default glyphicon glyphicon-search loupe\" aria-hidden=\"true\" ng-click=\"goSearch()\"></button>\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "<div ng-bind-html=\"bindHTML\" class=\"video-container video\">\n" +
+    "</div>\n"
   );
 
   $templateCache.put("anon/login.html",

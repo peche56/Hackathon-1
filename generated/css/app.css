@@ -7342,7 +7342,10 @@ button.close {
   }
 }
 
-
+.video{
+  width: 640px;
+  height: 385px;
+}
 
 
 /*# sourceMappingURL=app.css.map */

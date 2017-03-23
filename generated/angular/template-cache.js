@@ -1,13 +1,65 @@
 angular.module("app").run(["$templateCache", function($templateCache) {
 
   $templateCache.put("anon/home.html",
-    "<input class=\"search-bar\" type=\"text\" name=\"searching\" value=\"\" placeholder=\"Search something...\" ng-model=\"query\">\n" +
-    "<button type=\"button\" class=\"btn btn-default glyphicon glyphicon-search loupe\" aria-hidden=\"true\" ng-click=\"goSearch()\"></button>\n" +
+    "<div class=\"container\">\n" +
+    "\n" +
+    "\n" +
+    "    <div class=\"row\">\n" +
+    "\n" +
+    "        <div class=\"col-lg-12\">\n" +
     "\n" +
     "\n" +
     "\n" +
-    "<iframe src=\"{{bindHTML}}\" class=\"video\">\n" +
-    "</iframe>\n"
+    "            <input class=\"search-bar\" type=\"text\" name=\"searching\" value=\"\" placeholder=\"Search something...\" ng-model=\"query\">\n" +
+    "            <button type=\"button\" class=\"btn btn-default glyphicon glyphicon-search loupe\" aria-hidden=\"true\" ng-click=\"goSearch()\"></button>\n" +
+    "\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "<div class=\"row\">\n" +
+    "\n" +
+    "<p>{{title}}</p>\n" +
+    "\n" +
+    "</div>\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "    <div class=\"row\">\n" +
+    "\n" +
+    "        <div class=\"col-xs-6\">\n" +
+    "\n" +
+    "          <iframe src=\"{{bindHTML1}}\" class=\"video\"></iframe>\n" +
+    "\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <div class=\"col-xs-6\">\n" +
+    "\n" +
+    "            <iframe src=\"{{bindHTML2}}\" class=\"video\"></iframe>\n" +
+    "\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <div class=\"col-xs-6\">\n" +
+    "\n" +
+    "            <iframe src=\"{{bindHTML3}}\" class=\"video\"></iframe>\n" +
+    "\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <div class=\"col-xs-6\">\n" +
+    "\n" +
+    "            <iframe src=\"{{bindHTML4}}\" class=\"video\"></iframe>\n" +
+    "\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "</div>\n"
   );
 
   $templateCache.put("anon/login.html",

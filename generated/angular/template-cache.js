@@ -247,52 +247,60 @@ angular.module("app").run(["$templateCache", function($templateCache) {
   );
 
   $templateCache.put("anon/home.html",
-    "<div class=\"container\">\n" +
+    "<div class=\"container-fluid\">\n" +
     "\n" +
     "\n" +
     "    <div class=\"row\">\n" +
     "\n" +
     "        <div class=\"col-lg-12\">\n" +
     "\n" +
-    "\n" +
-    "\n" +
-    "            <input class=\"search-bar\" type=\"text\" name=\"searching\" value=\"\" placeholder=\"tapez un pays\" ng-model=\"query\">\n" +
-    "            <button type=\"button\" class=\"btn btn-default glyphicon glyphicon-search loupe\" aria-hidden=\"true\" ng-click=\"goSearch()\"></button>\n" +
+    "            <form class=\"form-horizontal\">\n" +
+    "                <div class=\"form-group form-group-lg\">\n" +
+    "                    <label class=\"col-lg-2 control-label\" for=\"formGroupInputLarge\"></label>\n" +
+    "                    <div class=\"col-lg-8\">\n" +
+    "                        <input class=\"form-control\" type=\"text\" id=\"formGroupInputLarge\" placeholder=\"Où souhaitez vous aller ?\" ng-model=\"query\">\n" +
+    "                    </div>\n" +
+    "                    <div class=\"col-lg-2\">\n" +
+    "                        <button type=\"button\" class=\"btn btn-default glyphicon glyphicon-search loupe\" aria-hidden=\"true\" ng-click=\"goSearch()\"></button>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
     "\n" +
     "        </div>\n" +
+    "\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "<div class=\"row\">\n" +
+    "\n" +
+    "    <div class=\"col-xs-5\">\n" +
+    "\n" +
+    "        <p class=\"david\">{{title1}}</p>\n" +
+    "        <iframe src=\"{{bindHTML1}}\" class=\"video\"></iframe>\n" +
+    "\n" +
     "    </div>\n" +
     "\n" +
+    "    <div class=\"col-xs-offset-1 col-xs-5\">\n" +
+    "        <p class=\"david\">{{title2}}</p>\n" +
+    "        <iframe src=\"{{bindHTML2}}\" class=\"video\"></iframe>\n" +
     "\n" +
-    "\n" +
-    "\n" +
-    "\n" +
-    "    <div class=\"row\">\n" +
-    "\n" +
-    "        <div class=\"col-xs-6\">\n" +
-    "\n" +
-    "  <p>{{title1}}</p>\n" +
-    "          <iframe src=\"{{bindHTML1}}\" class=\"video\"></iframe>\n" +
-    "\n" +
-    "        </div>\n" +
-    "\n" +
-    "        <div class=\"col-xs-6\">\n" +
-    "  <p>{{title2}}</p>\n" +
-    "            <iframe src=\"{{bindHTML2}}\" class=\"video\"></iframe>\n" +
-    "\n" +
-    "        </div>\n" +
-    "\n" +
-    "        <div class=\"col-xs-6\">\n" +
-    "  <p>{{title3}}</p>\n" +
-    "            <iframe src=\"{{bindHTML3}}\" class=\"video\"></iframe>\n" +
-    "\n" +
-    "        </div>\n" +
-    "\n" +
-    "        <div class=\"col-xs-6\">\n" +
-    "  <p>{{title4}}</p>\n" +
-    "            <iframe src=\"{{bindHTML4}}\" class=\"video\"></iframe>\n" +
-    "\n" +
-    "        </div>\n" +
     "    </div>\n" +
+    "\n" +
+    "    <div class=\"col-xs-5\">\n" +
+    "        <p class=\"david\">{{title3}}</p>\n" +
+    "        <iframe src=\"{{bindHTML3}}\" class=\"video\"></iframe>\n" +
+    "\n" +
+    "    </div>\n" +
+    "\n" +
+    "    <div class=\"col-xs-offset-1 col-xs-5\">\n" +
+    "        <p class=\"david\">{{title4}}</p>\n" +
+    "        <iframe src=\"{{bindHTML4}}\" class=\"video\"></iframe>\n" +
+    "\n" +
+    "    </div>\n" +
+    "</div>\n" +
     "\n" +
     "</div>\n"
   );
@@ -440,7 +448,7 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "        </div>\n" +
     "        <div class=\"collapse navbar-collapse\" id=\"navbar\">\n" +
     "            <ul class=\"nav navbar-nav\">\n" +
-    "                <li ui-sref-active=\"active\"><a ui-sref=\"anon.home\">Home</a></li>\n" +
+    "                <li ui-sref-active=\"active\"><a ui-sref=\"anon.home\">Recherche par Pays</a></li>\n" +
     "\n" +
     "            </ul>\n" +
     "            <ul class=\"nav navbar-nav navbar-right\">\n" +

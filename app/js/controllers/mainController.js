@@ -5,10 +5,60 @@ angular.module('app')
         $scope.query = "";
         $scope.goSearch = function() {
 
+          if ($scope.query === "france") {
+            $scope.query = "FR";
+          }
+
+          else if ($scope.query === "allemagne") {
+            $scope.query = "DE";
+          }
+
+          else if ($scope.query === "espagne") {
+            $scope.query = "ES";
+          }
+
+          else if ($scope.query === " royaume-uni") {
+            $scope.query = "GB";
+          }
+
+          else if ($scope.query === "italie") {
+            $scope.query = "IT";
+          }
+
+          else if ($scope.query === " états-unis") {
+            $scope.query = "US";
+          }
+
+          else if ($scope.query === "japon") {
+            $scope.query = "JP";
+          }
+
+          else if ($scope.query === "portugal") {
+            $scope.query = "PT";
+          }
+
+          else if ($scope.query === "sri lanka") {
+            $scope.query = "LK";
+          }
+
+          else if ($scope.query === "suisse") {
+            $scope.query = "CH";
+          }
+          else if ($scope.query === "australie") {
+            $scope.query = "AU";
+          }
+          else if ($scope.query === "chine") {
+            $scope.query = "CN";
+          }
+
+
             // webcam API
             webcamService.getOne($scope.query).then(function(response) {
                 $scope.details = response.data;
-                $scope.title = $scope.details.result.webcams[0].title;
+                $scope.title1 = $scope.details.result.webcams[0].title;
+                $scope.title2 = $scope.details.result.webcams[1].title;
+                $scope.title3 = $scope.details.result.webcams[2].title;
+                $scope.title4 = $scope.details.result.webcams[3].title;
                 console.log($scope.details.result);
 
 

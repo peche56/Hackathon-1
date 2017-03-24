@@ -1,5 +1,251 @@
 angular.module("app").run(["$templateCache", function($templateCache) {
 
+  $templateCache.put("anon/Berlin.html",
+    "<div class=\"container\">\n" +
+    "\n" +
+    "    <div class=\"row\">\n" +
+    "        <div class=\"col-lg-12\">\n" +
+    "            <h2>Europe</h2>\n" +
+    "            <h1>Berlin</h1>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class=\"row\">\n" +
+    "\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/berlin.jpg\" alt=\"\">\n" +
+    "        <a  class=\"lienb\" ui-sref=\"anon.map.berlin\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Berlin</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/lisbonne.jpg\" alt=\"\">\n" +
+    "          <a  class=\"lienb\" ui-sref=\"anon.map.lisbonne\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Lisbonne</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/madrid.jpg\" alt=\"\">\n" +
+    "        <a  class=\"lienb\" ui-sref=\"anon.map.madrid\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Madrid</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/paris.jpg\" alt=\"\">\n" +
+    "      <a  class=\"lienb\" ui-sref=\"anon.map.paris\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Paris</button></a>\n" +
+    "\n" +
+    "      </div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "<div class=\"row\">\n" +
+    "\n" +
+    "<div class=\"col-xs-offset-3 col-xs-6\">\n" +
+    "  \n" +
+    "        <iframe src=\"https://api.lookr.com/embed/timelapse/1301039285/lifetime\" class=\"video\"></iframe>\n" +
+    "\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "</div>\n"
+  );
+
+  $templateCache.put("anon/Lisbonne.html",
+    "<div class=\"container\">\n" +
+    "\n" +
+    "    <div class=\"row\">\n" +
+    "        <div class=\"col-lg-12\">\n" +
+    "            <h2>Europe</h2>\n" +
+    "            <h1>Lisbonne</h1>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class=\"row\">\n" +
+    "\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/berlin.jpg\" alt=\"\">\n" +
+    "        <a  class=\"lienb\" ui-sref=\"anon.map.berlin\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Berlin</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/lisbonne.jpg\" alt=\"\">\n" +
+    "          <a  class=\"lienb\" ui-sref=\"anon.map.lisbonne\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Lisbonne</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/madrid.jpg\" alt=\"\">\n" +
+    "        <a  class=\"lienb\" ui-sref=\"anon.map.madrid\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Madrid</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/paris.jpg\" alt=\"\">\n" +
+    "      <a  class=\"lienb\" ui-sref=\"anon.map.paris\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Paris</button></a>\n" +
+    "\n" +
+    "      </div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "<div class=\"row\">\n" +
+    "\n" +
+    "<div class=\"col-xs-offset-3 col-xs-6\">\n" +
+    "\n" +
+    "        <iframe src=\"https://api.lookr.com/embed/timelapse/1223209488/lifetime\" class=\"video\"></iframe>\n" +
+    "\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "</div>\n"
+  );
+
+  $templateCache.put("anon/Madrid.html",
+    "<div class=\"container\">\n" +
+    "\n" +
+    "    <div class=\"row\">\n" +
+    "        <div class=\"col-lg-12\">\n" +
+    "            <h2>Europe</h2>\n" +
+    "            <h1>Madrid</h1>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class=\"row\">\n" +
+    "\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/berlin.jpg\" alt=\"\">\n" +
+    "        <a  class=\"lienb\" ui-sref=\"anon.map.berlin\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Berlin</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/lisbonne.jpg\" alt=\"\">\n" +
+    "          <a  class=\"lienb\" ui-sref=\"anon.map.lisbonne\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Lisbonne</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/madrid.jpg\" alt=\"\">\n" +
+    "        <a  class=\"lienb\" ui-sref=\"anon.map.madrid\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Madrid</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/paris.jpg\" alt=\"\">\n" +
+    "      <a  class=\"lienb\" ui-sref=\"anon.map.paris\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Paris</button></a>\n" +
+    "\n" +
+    "      </div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "<div class=\"row\">\n" +
+    "\n" +
+    "<div class=\"col-xs-offset-3 col-xs-6\">\n" +
+    "\n" +
+    "        <iframe src=\"https://api.lookr.com/embed/timelapse/1235203721/lifetime\" class=\"video\"></iframe>\n" +
+    "\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "</div>\n"
+  );
+
+  $templateCache.put("anon/Paris.html",
+    "<div class=\"container\">\n" +
+    "\n" +
+    "    <div class=\"row\">\n" +
+    "        <div class=\"col-lg-12\">\n" +
+    "            <h2>Europe</h2>\n" +
+    "            <h1>Paris</h1>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class=\"row\">\n" +
+    "\n" +
+    "        <div class=\"col-xs-3\">\n" +
+    "            <img src=\"img/berlin.jpg\" alt=\"\">\n" +
+    "          <a  class=\"lienb\" ui-sref=\"anon.map.berlin\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Berlin</button></a>\n" +
+    "        </div>\n" +
+    "        <div class=\"col-xs-3\">\n" +
+    "            <img src=\"img/lisbonne.jpg\" alt=\"\">\n" +
+    "            <a  class=\"lienb\" ui-sref=\"anon.map.lisbonne\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Lisbonne</button></a>\n" +
+    "        </div>\n" +
+    "        <div class=\"col-xs-3\">\n" +
+    "            <img src=\"img/madrid.jpg\" alt=\"\">\n" +
+    "          <a  class=\"lienb\" ui-sref=\"anon.map.madrid\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Madrid</button></a>\n" +
+    "        </div>\n" +
+    "        <div class=\"col-xs-3\">\n" +
+    "            <img src=\"img/paris.jpg\" alt=\"\">\n" +
+    "        <a  class=\"lienb\" ui-sref=\"anon.map.paris\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Paris</button></a>\n" +
+    "\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "<div class=\"row\">\n" +
+    "\n" +
+    "    <div class=\"col-xs-offset-3 col-xs-6\">\n" +
+    "\n" +
+    "        <iframe src=\"https://api.lookr.com/embed/timelapse/1363351416/lifetime\" class=\"video\"></iframe>\n" +
+    "\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "</div>\n"
+  );
+
+  $templateCache.put("anon/bangkok.html",
+    "<div class=\"container\">\n" +
+    "\n" +
+    "    <div class=\"row\">\n" +
+    "        <div class=\"col-lg-12\">\n" +
+    "            <h2>Asie</h2>\n" +
+    "            <h1>Bangkok</h1>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class=\"row\">\n" +
+    "\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/tokyo.jpg\" alt=\"\">\n" +
+    "        <a ui-sref=\"anon.map.tokyo\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Tokyo</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/pekin.jpg\" alt=\"\">\n" +
+    "          <a ui-sref=\"anon.map.pekin\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Pekin</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/singapour.jpg\" alt=\"\">\n" +
+    "        <a ui-sref=\"anon.map.singapour\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Singapour</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/bangkok.jpg\" alt=\"\">\n" +
+    "      <a ui-sref=\"anon.map.bangkok\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Bangkok</button></a>\n" +
+    "\n" +
+    "      </div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "<div class=\"row\">\n" +
+    "\n" +
+    "    <div class=\"col-xs-offset-3 col-xs-6\">\n" +
+    "\n" +
+    "        <iframe src=\"https://api.lookr.com/embed/timelapse/1460384856/lifetime\" class=\"video\"></iframe>\n" +
+    "\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "</div>\n"
+  );
+
+  $templateCache.put("anon/brasilia.html",
+    "<div class=\"container\">\n" +
+    "\n" +
+    "    <div class=\"row\">\n" +
+    "        <div class=\"col-lg-12\">\n" +
+    "            <h2>Amerique</h2>\n" +
+    "            <h1>Brasilia</h1>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class=\"row\">\n" +
+    "\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/nyc.jpg\" alt=\"\">\n" +
+    "        <a class=\"lienb\" ui-sref=\"anon.map.newyork\"><button type=\"button\" class=\"btn btn-primary img-responsive\">New-York</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/brazilia.jpg\" alt=\"\">\n" +
+    "          <a class=\"lienb\" ui-sref=\"anon.map.brasilia\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Brasilia</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/mexico.jpg\" alt=\"\">\n" +
+    "        <a class=\"lienb\" ui-sref=\"anon.map.mexico\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Mexico</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/santiago.jpg\" alt=\"\">\n" +
+    "      <a class=\"lienb\" ui-sref=\"anon.map.santiago\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Santiago</button></a>\n" +
+    "\n" +
+    "      </div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "<div class=\"row\">\n" +
+    "\n" +
+    "<div class=\"col-xs-offset-3 col-xs-6\">\n" +
+    "  \n" +
+    "        <iframe src=\"https://api.lookr.com/embed/timelapse/1333635975/lifetime\" class=\"video\"></iframe>\n" +
+    "\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "</div>\n"
+  );
+
   $templateCache.put("anon/home.html",
     "<div class=\"container\">\n" +
     "\n" +
@@ -150,6 +396,47 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "  </script>\n"
   );
 
+  $templateCache.put("anon/mexico.html",
+    "<div class=\"container\">\n" +
+    "\n" +
+    "    <div class=\"row\">\n" +
+    "        <div class=\"col-lg-12\">\n" +
+    "            <h2>Amerique</h2>\n" +
+    "            <h1>Mexico</h1>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class=\"row\">\n" +
+    "\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/nyc.jpg\" alt=\"\">\n" +
+    "        <a  class=\"lienb\" ui-sref=\"anon.map.newyork\"><button type=\"button\" class=\"btn btn-primary img-responsive\">New-York</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/brazilia.jpg\" alt=\"\">\n" +
+    "          <a  class=\"lienb\" ui-sref=\"anon.map.brasilia\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Brasilia</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/mexico.jpg\" alt=\"\">\n" +
+    "        <a  class=\"lienb\" ui-sref=\"anon.map.mexico\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Mexico</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/santiago.jpg\" alt=\"\">\n" +
+    "      <a  class=\"lienb\" ui-sref=\"anon.map.santiago\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Santiago</button></a>\n" +
+    "\n" +
+    "      </div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "<div class=\"row\">\n" +
+    "\n" +
+    "    <div class=\"col-xs-offset-3 col-xs-6\">\n" +
+    "\n" +
+    "        <iframe src=\"https://api.lookr.com/embed/timelapse/1306620907/lifetime\" class=\"video\"></iframe>\n" +
+    "\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "</div>\n"
+  );
+
   $templateCache.put("anon/navbar.html",
     "<nav class=\"navbar navbar-default\" role=\"navigation\" ng-controller=\"NavbarController\">\n" +
     "    <div class=\"container-fluid\">\n" +
@@ -181,6 +468,88 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "</nav>\n"
   );
 
+  $templateCache.put("anon/newyork.html",
+    "<div class=\"container\">\n" +
+    "\n" +
+    "    <div class=\"row\">\n" +
+    "        <div class=\"col-lg-12\">\n" +
+    "            <h2>Amerique</h2>\n" +
+    "            <h1>New-York</h1>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class=\"row\">\n" +
+    "\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/nyc.jpg\" alt=\"\">\n" +
+    "        <a  class=\"lienb\" ui-sref=\"anon.map.newyork\"><button type=\"button\" class=\"btn btn-primary img-responsive\">New-York</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/brazilia.jpg\" alt=\"\">\n" +
+    "          <a  class=\"lienb\" ui-sref=\"anon.map.brasilia\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Brasilia</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/mexico.jpg\" alt=\"\">\n" +
+    "        <a  class=\"lienb\" ui-sref=\"anon.map.mexico\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Mexico</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/santiago.jpg\" alt=\"\">\n" +
+    "      <a  class=\"lienb\" ui-sref=\"anon.map.santiago\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Santiago</button></a>\n" +
+    "\n" +
+    "      </div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "<div class=\"row\">\n" +
+    "\n" +
+    "    <div class=\"col-xs-offset-3 col-xs-6\">\n" +
+    "\n" +
+    "        <iframe src=\"https://api.lookr.com/embed/timelapse/1483962191/lifetime\" class=\"video\"></iframe>\n" +
+    "\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "</div>\n"
+  );
+
+  $templateCache.put("anon/pekin.html",
+    "<div class=\"container\">\n" +
+    "\n" +
+    "    <div class=\"row\">\n" +
+    "        <div class=\"col-lg-12\">\n" +
+    "            <h2>Asie</h2>\n" +
+    "            <h1>Pekin</h1>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class=\"row\">\n" +
+    "\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/tokyo.jpg\" alt=\"\">\n" +
+    "        <a ui-sref=\"anon.map.tokyo\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Tokyo</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/pekin.jpg\" alt=\"\">\n" +
+    "          <a ui-sref=\"anon.map.pekin\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Pekin</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/singapour.jpg\" alt=\"\">\n" +
+    "        <a ui-sref=\"anon.map.singapour\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Singapour</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/bangkok.jpg\" alt=\"\">\n" +
+    "      <a ui-sref=\"anon.map.bangkok\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Bangkok</button></a>\n" +
+    "\n" +
+    "      </div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "<div class=\"row\">\n" +
+    "\n" +
+    "    <div class=\"col-xs-offset-3 col-xs-6\">\n" +
+    "\n" +
+    "        <iframe src=\"https://api.lookr.com/embed/timelapse/1310898155/lifetime\" class=\"video\"></iframe>\n" +
+    "\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "</div>\n"
+  );
+
   $templateCache.put("anon/register.html",
     "<div class=\"row\">\n" +
     "    <div class=\"col-xs-6 col-xs-offset-3\">\n" +
@@ -197,6 +566,128 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "            <button type=\"submit\" class=\"btn btn-primary btn-block\">Register</button>\n" +
     "        </form>\n" +
     "    </div>\n" +
+    "</div>\n"
+  );
+
+  $templateCache.put("anon/santiago.html",
+    "<div class=\"container\">\n" +
+    "\n" +
+    "    <div class=\"row\">\n" +
+    "        <div class=\"col-lg-12\">\n" +
+    "            <h2>Amerique</h2>\n" +
+    "            <h1>Santiago</h1>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class=\"row\">\n" +
+    "\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/nyc.jpg\" alt=\"\">\n" +
+    "        <a  class=\"lienb\" class=\"lienb\" ui-sref=\"anon.map.newyork\"><button type=\"button\" class=\"btn btn-primary img-responsive\">New-York</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/brazilia.jpg\" alt=\"\">\n" +
+    "          <a  class=\"lienb\" class=\"lienb\" ui-sref=\"anon.map.brasilia\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Brasilia</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/mexico.jpg\" alt=\"\">\n" +
+    "        <a  class=\"lienb\" class=\"lienb\" ui-sref=\"anon.map.mexico\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Mexico</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/santiago.jpg\" alt=\"\">\n" +
+    "      <a  class=\"lienb\" class=\"lienb\" ui-sref=\"anon.map.santiago\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Santiago</button></a>\n" +
+    "\n" +
+    "      </div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "<div class=\"row\">\n" +
+    "\n" +
+    "    <div class=\"col-xs-offset-3 col-xs-6\">\n" +
+    "\n" +
+    "        <iframe src=\"https://api.lookr.com/embed/timelapse/1465955470/lifetime\" class=\"video\"></iframe>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "</div>\n"
+  );
+
+  $templateCache.put("anon/singapour.html",
+    "<div class=\"container\">\n" +
+    "\n" +
+    "    <div class=\"row\">\n" +
+    "        <div class=\"col-lg-12\">\n" +
+    "            <h2>Asie</h2>\n" +
+    "            <h1>Singapour</h1>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class=\"row\">\n" +
+    "\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/tokyo.jpg\" alt=\"\">\n" +
+    "        <a ui-sref=\"anon.map.tokyo\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Tokyo</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/pekin.jpg\" alt=\"\">\n" +
+    "          <a ui-sref=\"anon.map.pekin\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Pekin</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/singapour.jpg\" alt=\"\">\n" +
+    "        <a ui-sref=\"anon.map.singapour\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Singapour</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/bangkok.jpg\" alt=\"\">\n" +
+    "      <a ui-sref=\"anon.map.bangkok\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Bangkok</button></a>\n" +
+    "\n" +
+    "      </div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "<div class=\"row\">\n" +
+    "\n" +
+    "    <div class=\"col-xs-offset-3 col-xs-6\">\n" +
+    "\n" +
+    "        <iframe src=\"https://api.lookr.com/embed/timelapse/1381310608/lifetime\" class=\"video\"></iframe>\n" +
+    "\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "</div>\n"
+  );
+
+  $templateCache.put("anon/tokyo.html",
+    "<div class=\"container\">\n" +
+    "\n" +
+    "    <div class=\"row\">\n" +
+    "        <div class=\"col-lg-12\">\n" +
+    "            <h2>Asie</h2>\n" +
+    "            <h1>Tokyo</h1>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class=\"row\">\n" +
+    "\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/tokyo.jpg\" alt=\"\">\n" +
+    "        <a ui-sref=\"anon.map.tokyo\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Tokyo</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/pekin.jpg\" alt=\"\">\n" +
+    "          <a ui-sref=\"anon.map.pekin\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Pekin</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/singapour.jpg\" alt=\"\">\n" +
+    "        <a ui-sref=\"anon.map.singapour\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Singapour</button></a>\n" +
+    "      </div>\n" +
+    "      <div class=\"col-xs-3\">\n" +
+    "          <img src=\"img/bangkok.jpg\" alt=\"\">\n" +
+    "      <a ui-sref=\"anon.map.bangkok\"><button type=\"button\" class=\"btn btn-primary img-responsive\">Bangkok</button></a>\n" +
+    "\n" +
+    "      </div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "<div class=\"row\">\n" +
+    "\n" +
+    "    <div class=\"col-xs-offset-3 col-xs-6\">\n" +
+    "\n" +
+    "        <iframe src=\"https://api.lookr.com/embed/timelapse/1362211264/lifetime\" class=\"video\"></iframe>\n" +
+    "\n" +
+    "    </div>\n" +
+    "</div>\n" +
     "</div>\n"
   );
 

@@ -33,6 +33,126 @@ angular.module('app')
                 }
             })
 
+            .state('anon.map.berlin', {
+                url: '/berlin',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/Berlin.html',
+                        controller: 'BerlinController'
+                    }
+                }
+            })
+
+            .state('anon.map.paris', {
+                url: '/paris',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/Paris.html',
+                        controller: 'ParisController'
+                    }
+                }
+            })
+
+            .state('anon.map.lisbonne', {
+                url: '/lisbonne',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/Lisbonne.html',
+                        controller: 'LisbonneController'
+                    }
+                }
+            })
+
+            .state('anon.map.madrid', {
+                url: '/madrid',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/Madrid.html',
+                        controller: 'MadridController'
+                    }
+                }
+            })
+
+            .state('anon.map.newyork', {
+                url: '/newyork',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/newyork.html',
+                        controller: 'newyorkController'
+                    }
+                }
+            })
+
+            .state('anon.map.mexico', {
+                url: '/mexico',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/mexico.html',
+                        controller: 'mexicoController'
+                    }
+                }
+            })
+
+            .state('anon.map.santiago', {
+                url: '/santiago',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/santiago.html',
+                        controller: 'santiagoController'
+                    }
+                }
+            })
+
+            .state('anon.map.brasilia', {
+                url: '/brasilia',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/brasilia.html',
+                        controller: 'brasiliaController'
+                    }
+                }
+            })
+
+            .state('anon.map.tokyo', {
+                url: '/tokyo',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/tokyo.html',
+                        controller: 'tokyoController'
+                    }
+                }
+            })
+
+            .state('anon.map.pekin', {
+                url: '/pekin',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/pekin.html',
+                        controller: 'pekinController'
+                    }
+                }
+            })
+
+            .state('anon.map.bangkok', {
+                url: '/bangkok',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/bangkok.html',
+                        controller: 'bangkokController'
+                    }
+                }
+            })
+
+            .state('anon.map.singapour', {
+                url: '/singapour',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/singapour.html',
+                        controller: 'singapourController'
+                    }
+                }
+            })
+
             .state('anon.login', {
                 url: '/login',
                 views: {

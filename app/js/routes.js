@@ -33,6 +33,16 @@ angular.module('app')
                 }
             })
 
+            .state('anon.city', {
+                url: '/map/:city',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/city.html',
+                        controller: 'CityController'
+                    }
+                }
+            })
+
             .state('anon.login', {
                 url: '/login',
                 views: {

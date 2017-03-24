@@ -1,5 +1,9 @@
 angular.module("app").run(["$templateCache", function($templateCache) {
 
+  $templateCache.put("anon/city.html",
+    "<h1>Paris</h1>\n"
+  );
+
   $templateCache.put("anon/home.html",
     "<div class=\"container\">\n" +
     "\n" +
@@ -87,8 +91,8 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "  <script type=\"text/javascript\">\n" +
     "    var locations = [\n" +
     "      //EUROPE\n" +
-    "      ['Paris ', 48.85661400000001, 2.3522219000000177],\n" +
-    "      ['Madrid', 40.4167754, -3.7037901999999576],\n" +
+    "      ['Paris'.link(\"/#!/map/paris\"), 48.85661400000001, 2.3522219000000177],\n" +
+    "      ['Madrid'.link(\"/#!/map/madrid\"), 40.4167754, -3.7037901999999576],\n" +
     "      ['Lisbonne', 38.7222524, -9.139336599999979],\n" +
     "      ['Rome', 41.9027835, 12.496365500000024],\n" +
     "      ['Londres', 51.5073509, -0.12775829999998223],\n" +

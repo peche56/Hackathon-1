@@ -1,48 +1,56 @@
-<div class="container">
+<div class="container-fluid">
 
 
     <div class="row">
 
         <div class="col-lg-12">
 
-
-
-            <input class="search-bar" type="text" name="searching" value="" placeholder="tapez un pays" ng-model="query">
-            <button type="button" class="btn btn-default glyphicon glyphicon-search loupe" aria-hidden="true" ng-click="goSearch()"></button>
+            <form class="form-horizontal">
+                <div class="form-group form-group-lg">
+                    <label class="col-lg-2 control-label" for="formGroupInputLarge"></label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Où souhaitez vous aller ?" ng-model="query">
+                    </div>
+                    <div class="col-lg-2">
+                        <button type="button" class="btn btn-default glyphicon glyphicon-search loupe" aria-hidden="true" ng-click="goSearch()"></button>
+                    </div>
+                </div>
 
         </div>
+
+    </div>
+</div>
+
+
+
+
+
+<div class="row">
+
+    <div class="col-xs-5">
+
+        <p class="david">{{title1}}</p>
+        <iframe src="{{bindHTML1}}" class="video"></iframe>
+
     </div>
 
+    <div class="col-xs-offset-1 col-xs-5">
+        <p class="david">{{title2}}</p>
+        <iframe src="{{bindHTML2}}" class="video"></iframe>
 
-
-
-
-    <div class="row">
-
-        <div class="col-xs-6">
-
-  <p>{{title1}}</p>
-          <iframe src="{{bindHTML1}}" class="video"></iframe>
-
-        </div>
-
-        <div class="col-xs-6">
-  <p>{{title2}}</p>
-            <iframe src="{{bindHTML2}}" class="video"></iframe>
-
-        </div>
-
-        <div class="col-xs-6">
-  <p>{{title3}}</p>
-            <iframe src="{{bindHTML3}}" class="video"></iframe>
-
-        </div>
-
-        <div class="col-xs-6">
-  <p>{{title4}}</p>
-            <iframe src="{{bindHTML4}}" class="video"></iframe>
-
-        </div>
     </div>
+
+    <div class="col-xs-5">
+        <p class="david">{{title3}}</p>
+        <iframe src="{{bindHTML3}}" class="video"></iframe>
+
+    </div>
+
+    <div class="col-xs-offset-1 col-xs-5">
+        <p class="david">{{title4}}</p>
+        <iframe src="{{bindHTML4}}" class="video"></iframe>
+
+    </div>
+</div>
 
 </div>

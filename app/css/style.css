@@ -10,6 +10,7 @@
         }
 
         p {
+          margin-top: 20px;
             text-align: center;
         }
 
@@ -21,10 +22,22 @@
             font-size: 30px;
         }
 
-        container {
-            background-image: url(img/04.jpg);
+        body {
+            background-image: url(../img/paper_texture_04.png);
+
           }
 
         a.lienb {
           color: white;
         }
+.loupe {
+
+margin-top: 7px;
+
+}
+
+p.david {
+font-size: 14px;
+font-weight: bold;
+
+}

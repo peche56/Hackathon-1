@@ -2,7 +2,7 @@ angular.module('app')
     .controller('MainController', function($scope, webcamService, $sce) {
 
 
-        $scope.query = "";
+        $scope.query = "FR";
         $scope.goSearch = function() {
 
           if ($scope.query === "france") {
@@ -25,7 +25,7 @@ angular.module('app')
             $scope.query = "IT";
           }
 
-          else if ($scope.query === " états-unis") {
+          else if ($scope.query === " etats-unis") {
             $scope.query = "US";
           }
 
